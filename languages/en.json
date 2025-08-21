@@ -1,0 +1,16 @@
+{
+    "c2dictionary": true,
+    "data": {
+        "menu": "Main menu",
+        "nextlevel": "Next level",
+        "play": "Start",
+        "continue": "Continue",
+        "howtoplay": "How to play?",
+        "tuto": "Your task is to burst a certain number of bubbles, but you will have a limited number of bullets.\nBullets can bounce off some walls, break them, or crash against them, so be careful!\nYou can also move your cannon up or down, so you can reach anywhere!",
+        "back": "<< Back",
+        "levelcomplete": "Level complete!",
+        "tryagain": "Try again!",
+        "newgame": "New game",
+        "congratulations": "Congratulations! You passed the game"
+    }
+}

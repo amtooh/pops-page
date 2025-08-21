@@ -1,0 +1,15 @@
+{
+    "c2dictionary": true,
+    "data": {
+        "menu": "Ana menü",
+        "nextlevel": "Sonraki seviye",
+        "play": "Başlamak",
+        "continue": "Devam etmek",
+        "howtoplay": "Nasıl oynanır?",
+        "tuto": "Senin görevin belli sayıda balonu patlatmak, ancak sınırlı sayıda merminiz olacak\nMermiler bazı duvarlardan sıçrayabilir, onları kırabilir veya onlara çarpabilir, o yüzden dikkatli ol!\nAyrıca silahını yukarı veya aşağı hareket ettirebilirsin, böylece istediğin yere ulaşabilirsin!",
+        "back": "<< Geri",
+        "levelcomplete": "Seviye tamamlandı!",
+        "tryagain": "Bir daha dene!",
+        "newgame": "Tebrikler! Oyunu geçtin"
+    }
+}
