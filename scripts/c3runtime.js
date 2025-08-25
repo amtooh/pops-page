@@ -1894,18 +1894,42 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			return () => (and("bullet num ", n0.ExpObject()) + " has destroyed");
 		},
+		() => "killbullet",
+		() => "mobile",
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject();
 		},
-		() => "bubbles",
-		() => "hole",
-		() => "killbullet",
-		() => 4,
+		p => {
+			const n0 = p._GetNode(0);
+			const f1 = p._GetNode(1).GetBoundMethod();
+			return () => C3.lerp(n0.ExpObject(), 96, ((0.1 * 60) * f1()));
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			const f1 = p._GetNode(1).GetBoundMethod();
+			return () => C3.lerp(n0.ExpObject(), 100, ((0.1 * 60) * f1()));
+		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0();
 		},
+		p => {
+			const n0 = p._GetNode(0);
+			const f1 = p._GetNode(1).GetBoundMethod();
+			return () => C3.lerp(n0.ExpObject(), 64, ((0.1 * 60) * f1()));
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			const f1 = p._GetNode(1).GetBoundMethod();
+			return () => C3.lerp(n0.ExpObject(), 0, ((0.1 * 60) * f1()));
+		},
+		() => "bubbles",
+		() => "hole",
+		() => "borders",
+		() => 999,
+		() => "desktop",
+		() => 4,
 		() => "hsl",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
@@ -2086,7 +2110,8 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			const n1 = p._GetNode(1);
 			return () => n0.ExpObject(n1.ExpInstVar_Family());
-		}
+		},
+		() => "mob"
 ];
 
 
