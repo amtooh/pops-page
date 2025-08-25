@@ -1895,11 +1895,15 @@ self.C3_ExpressionFuncs = [
 			return () => (and("bullet num ", n0.ExpObject()) + " has destroyed");
 		},
 		() => "killbullet",
-		() => "mobile",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0();
+		},
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject();
 		},
+		() => "mobile",
 		p => {
 			const n0 = p._GetNode(0);
 			const f1 = p._GetNode(1).GetBoundMethod();
@@ -1909,10 +1913,6 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			const f1 = p._GetNode(1).GetBoundMethod();
 			return () => C3.lerp(n0.ExpObject(), 100, ((0.1 * 60) * f1()));
-		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0();
 		},
 		p => {
 			const n0 = p._GetNode(0);
@@ -2108,7 +2108,11 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			const n1 = p._GetNode(1);
 			return () => n0.ExpObject(n1.ExpInstVar_Family());
-		}
+		},
+		() => "vign",
+		() => "htub",
+		() => "vtub",
+		() => "BetterOutline"
 ];
 
 

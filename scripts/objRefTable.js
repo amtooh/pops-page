@@ -42,6 +42,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Cnds.HasTags,
 		C3.Plugins.Touch.Cnds.IsTouchingObject,
 		C3.Plugins.System.Cnds.Compare,
+		C3.Plugins.Touch.Exps.Y,
+		C3.Plugins.Sprite.Exps.Y,
 		C3.Plugins.Sprite.Exps.Count,
 		C3.Plugins.Eponesh_GameScore.Cnds.IsAdsFullscreenPlaying,
 		C3.Plugins.Eponesh_GameScore.Cnds.IsAdsPreloaderPlaying,
@@ -54,7 +56,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Exps.Opacity,
 		C3.Plugins.Sprite.Acts.SetPos,
 		C3.Plugins.Touch.Exps.X,
-		C3.Plugins.Touch.Exps.Y,
 		C3.Plugins.Sprite.Acts.SetTowardPosition,
 		C3.Plugins.Touch.Cnds.OnTouchObject,
 		C3.Plugins.System.Cnds.CompareVar,
@@ -62,7 +63,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.CreateObject,
 		C3.Plugins.System.Cnds.EveryTick,
 		C3.Plugins.Sprite.Exps.X,
-		C3.Plugins.Sprite.Exps.Y,
 		C3.Plugins.Sprite.Cnds.OnCreated,
 		C3.Plugins.Sprite.Acts.SetEffectParam,
 		C3.Plugins.System.Exps.random,
@@ -122,7 +122,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Dictionary.Acts.JSONLoad,
 		C3.Plugins.AJAX.Exps.LastData,
 		C3.Plugins.System.Acts.WaitForPreviousActions,
-		C3.Plugins.Dictionary.Exps.Get
+		C3.Plugins.Dictionary.Exps.Get,
+		C3.Plugins.TiledBg.Acts.SetEffectEnabled,
+		C3.Plugins.System.Acts.SetLayerEffectEnabled
 	];
 };
 self.C3_JsPropNameTable = [
@@ -181,13 +183,13 @@ self.C3_JsPropNameTable = [
 	{jeudemots: 0},
 	{tryagain_text: 0},
 	{DrawingCanvas: 0},
+	{TiledBackground: 0},
 	{dict_text: 0},
 	{gameplay: 0},
 	{ad_number: 0},
 	{lerp_speed: 0},
 	{menu_stage: 0},
-	{game_loaded: 0},
-	{device: 0}
+	{game_loaded: 0}
 ];
 
 self.InstanceType = {
@@ -232,5 +234,6 @@ self.InstanceType = {
 	jeudemots: class extends self.ISpriteInstance {},
 	tryagain_text: class extends self.ITextInstance {},
 	DrawingCanvas: class extends self.IDrawingCanvasInstance {},
+	TiledBackground: class extends self.ITiledBackgroundInstance {},
 	dict_text: class extends self.ITextInstance {}
 }
