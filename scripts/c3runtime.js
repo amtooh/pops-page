@@ -1928,8 +1928,6 @@ self.C3_ExpressionFuncs = [
 		() => "hole",
 		() => "borders",
 		() => 999,
-		() => "desktop",
-		() => 4,
 		() => "hsl",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
@@ -2110,8 +2108,7 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			const n1 = p._GetNode(1);
 			return () => n0.ExpObject(n1.ExpInstVar_Family());
-		},
-		() => "mob"
+		}
 ];
 
 
